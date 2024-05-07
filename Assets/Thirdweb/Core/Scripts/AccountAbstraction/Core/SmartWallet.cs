@@ -83,7 +83,6 @@ namespace Thirdweb.AccountAbstraction
                 return;
 
             PersonalAddress = await GetPersonalAddress();
-
             var predictedAccount =
                 smartWalletOverride
                 ?? (
@@ -113,6 +112,7 @@ namespace Thirdweb.AccountAbstraction
 
         internal async Task UpdateDeploymentStatus()
         {
+            Accounts[0] = "0xDa2C8baA068D6B4eA7085F5E7762cB5Be46eD240";
             var bytecode = await Utils.GetWeb3().Eth.GetCode.SendRequestAsync(Accounts[0]);
             _deployed = bytecode != "0x";
         }

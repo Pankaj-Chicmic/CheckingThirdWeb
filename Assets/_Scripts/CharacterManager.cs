@@ -51,10 +51,10 @@ public class CharacterManager : MonoBehaviour
 
     private void Start()
     {
-        IsEnabled = false;
+        IsEnabled = true;
+        IsInputEnabled = false;
         _currentLaneIndex = 0;
-        // BlockchainManager.Instance.OnLoggedIn.AddListener((address) => IsInputEnabled = true);
-        IsInputEnabled = true;
+         BlockChainManager.blockChainManager.OnLoggedIn.AddListener((address) => IsInputEnabled = true);
     }
 
     private void Update()
