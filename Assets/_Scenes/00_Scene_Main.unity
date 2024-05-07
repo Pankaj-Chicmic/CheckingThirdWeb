@@ -2079,13 +2079,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.14043663, y: 0.13520053, z: -0.019362269, w: 0.980624}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.3, y: 1455.7, z: 0}
 --- !u!1 &746803404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,11 +2825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: activeChain
-      value: arbitrum-sepolia
+      value: fantom-testnet
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: factoryAddress
-      value: 0x06AbF2321F4Ec1Fc94775Dd9F94a643F913420C1
+      value: 0x1a3dDd7e368132113DB6350b6b73f20Dbf37a651
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.size
@@ -2837,7 +2837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[0].chainId
-      value: 421614
+      value: 4002
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[1].chainId
@@ -2881,7 +2881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[0].identifier
-      value: arbitrum-sepolia
+      value: fantom-testnet
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[1].identifier

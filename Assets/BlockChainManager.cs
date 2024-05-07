@@ -24,7 +24,7 @@ public class BlockChainManager : MonoBehaviour
     }
     private void Update()
     {
-        claimAmount = characterController.DistanceTravelled.ToString();
+        claimAmount = ((int)characterController.DistanceTravelled).ToString();
     }
     public async void Login(string authProvider)
     {
@@ -45,7 +45,11 @@ public class BlockChainManager : MonoBehaviour
     public async void ClaimToken()
     {
         claimButton.interactable = false;
-        var Contract = ThirdwebManager.Instance.SDK.GetContract("0xF7Fa56BF7EA390C319c2501A0b9c364c96156B82");
-        var result = await Contract.ERC20.ClaimTo(address, claimAmount);
+        var Contract = ThirdwebManager.Instance.SDK.GetContract("0xceC7c826F288583e348C5a0Df984026BA7699308");
+        CurrencyValue currencyValue =await Contract.ERC20.BalanceOf(address);
+        Debug.Log(currencyValue.displayValue + " " + currencyValue.value + " " + currencyValue.symbol + " " + currencyValue.name + " " + currencyValue.decimals);
+        var result = await Contract.ERC20.ClaimTo(address,claimAmount);
+        currencyValue =await Contract.ERC20.BalanceOf(address);
+        Debug.Log(currencyValue.displayValue+" "+currencyValue.value+" "+currencyValue.symbol+" "+currencyValue.name+" "+currencyValue.decimals);
     }
 }
