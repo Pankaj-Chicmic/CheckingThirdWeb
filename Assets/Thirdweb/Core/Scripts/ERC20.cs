@@ -425,9 +425,9 @@ namespace Thirdweb
         /// </summary>
         public async Task<bool> CanClaim(string quantity, string? addressToCheck = null)
         {
+                return await Bridge.InvokeRoute<bool>(getRoute("canClaim"), Utils.ToJsonStringArray(quantity, addressToCheck));
             if (Utils.IsWebGLBuild())
             {
-                return await Bridge.InvokeRoute<bool>(getRoute("canClaim"), Utils.ToJsonStringArray(quantity, addressToCheck));
             }
             else
             {
@@ -440,9 +440,9 @@ namespace Thirdweb
         /// </summary>
         public async Task<string[]> GetIneligibilityReasons(string quantity, string? addressToCheck = null)
         {
+                return await Bridge.InvokeRoute<string[]>(getRoute("getClaimIneligibilityReasons"), Utils.ToJsonStringArray(quantity, addressToCheck));
             if (Utils.IsWebGLBuild())
             {
-                return await Bridge.InvokeRoute<string[]>(getRoute("getClaimIneligibilityReasons"), Utils.ToJsonStringArray(quantity, addressToCheck));
             }
             else
             {

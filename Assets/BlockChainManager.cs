@@ -38,18 +38,30 @@ public class BlockChainManager : MonoBehaviour
                 provider = AuthProvider.Apple;
                 break;
         }
-        var connection = new WalletConnection(provider: WalletProvider.SmartWallet, chainId: 421614, personalWallet: WalletProvider.EmbeddedWallet, authOptions: new AuthOptions(provider));
+        var connection = new WalletConnection(
+            provider: WalletProvider.SmartWallet, 
+            chainId: 4002, 
+            personalWallet: WalletProvider.EmbeddedWallet, 
+            authOptions: new AuthOptions(authProvider : provider)
+            );
         address = await ThirdwebManager.Instance.SDK.wallet.Connect(connection);
+        Debug.Log(address);
         OnLoggedIn?.Invoke(address);
     }
     public async void ClaimToken()
     {
         claimButton.interactable = false;
-        var Contract = ThirdwebManager.Instance.SDK.GetContract("0xceC7c826F288583e348C5a0Df984026BA7699308");
+        var Contract = ThirdwebManager.Instance.SDK.GetContract("0x7D77a4De30e7c07Fa43d8A0B3A574591f6e07EeF");
         CurrencyValue currencyValue =await Contract.ERC20.BalanceOf(address);
         Debug.Log(currencyValue.displayValue + " " + currencyValue.value + " " + currencyValue.symbol + " " + currencyValue.name + " " + currencyValue.decimals);
-        var result = await Contract.ERC20.ClaimTo(address,claimAmount);
+        //var a = await Contract.ERC20.Transfer("0x030C9BbD80d5b940438B53bA32E6392555998d24", claimAmount);
+        //currencyValue = await Contract.ERC20.BalanceOf(address);
+        //Debug.Log(currencyValue.displayValue + " " + currencyValue.value + " " + currencyValue.symbol + " " + currencyValue.name + " " + currencyValue.decimals);
+        //var a = await Contract.ERC20.Claim("1");
+        //Debug.Log(await a.ToJToken());
+        var result = await Contract.ERC20.Claim(claimAmount);
         currencyValue =await Contract.ERC20.BalanceOf(address);
+
         Debug.Log(currencyValue.displayValue+" "+currencyValue.value+" "+currencyValue.symbol+" "+currencyValue.name+" "+currencyValue.decimals);
     }
 }
