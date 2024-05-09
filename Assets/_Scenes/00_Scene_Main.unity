@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42e895d997ccaa479ba735a717a64fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tokenAddress: 0xceC7c826F288583e348C5a0Df984026BA7699308
-  leaderboardAddress: 0xf0db1a6E52D5e5bF645c93C2c90756d3070C861f
+  tokenAddress: 0x719053d417932bF4F983206c801f84F56d46D346
+  leaderboardAddress: 0xBa0b1F1bac8436B281227dEE408e71c027fC0C2B
   leaderboardAbi: '[   {     "type": "event",     "name": "ScoreAdded",     "inputs":
     [       {         "type": "address",         "name": "player",         "indexed":
     true,         "internalType": "address"       },       {         "type": "uint256",        
@@ -2961,15 +2961,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: clientId
-      value: bc48860e049930f7e0aef2084f91e449
+      value: 1db88cf4ecc3e2948aa7ec6f746b15e6
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: activeChain
-      value: fantom-testnet
+      value: swissDLT
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: factoryAddress
-      value: 0x1a3dDd7e368132113DB6350b6b73f20Dbf37a651
+      value: 0x7915286394c28637968c37bb2E552728bC8028FD
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: bundleIdOverride
@@ -2981,7 +2981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[0].chainId
-      value: 4002
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[1].chainId
@@ -3025,7 +3025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[0].identifier
-      value: fantom-testnet
+      value: swissDLT
       objectReference: {fileID: 0}
     - target: {fileID: 4404896360829706404, guid: 379ed01658d62a14484f953196ff19db, type: 3}
       propertyPath: supportedChains.Array.data[1].identifier
